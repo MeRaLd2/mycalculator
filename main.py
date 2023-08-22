@@ -4,18 +4,33 @@ def add(x, y):
 def subtract(x, y):
     return x - y
 
-print("Select operation:")
-print("1. Add")
-print("2. Subtract")
+def multiply(x, y):
+    return x * y
 
-choice = input("Enter choice (1/2): ")
+def divide(x, y):
+    if y != 0:
+        return x / y
+    else:
+        return "На ноль делить нельзя"
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+print("Выбирите операцию:")
+print("1. Сложение")
+print("2. Вычитание")
+print("3. Умножение")
+print("4. Деление")
+
+choice = input("Выбирите функцию (1/2/3/4): ")
+
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
 
 if choice == '1':
-    print("Result:", add(num1, num2))
+    print("Результат:", add(num1, num2))
 elif choice == '2':
-    print("Result:", subtract(num1, num2))
+    print("Результат:", subtract(num1, num2))
+elif choice == '3':
+    print("Результат:", multiply(num1, num2))
+elif choice == '4':
+    print("Результат:", divide(num1, num2))
 else:
-    print("Invalid input")
+    print("Неправильный ввод")
